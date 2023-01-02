@@ -58,7 +58,7 @@ function apiUsuarioPost( $request ) {
 
 function resgistrarApiUsuarioPost() {
 	register_rest_route(
-			'apiTeste', '/usuario', array(
+			'api', '/usuario', array(
 				array(
 			'methods'  => 'POST', //PUT
 			'callback' => 'apiUsuarioPost'

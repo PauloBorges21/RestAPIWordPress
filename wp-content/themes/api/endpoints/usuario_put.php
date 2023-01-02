@@ -52,7 +52,7 @@ function apiUsuarioPUT($request)
 function resgistrarApiUsuarioPUT()
 {
 	register_rest_route(
-		'apiTeste',
+		'api',
 		'/usuario',
 		array(
 			array(

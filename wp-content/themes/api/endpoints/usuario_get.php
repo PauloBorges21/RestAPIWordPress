@@ -31,7 +31,7 @@ function apiUsuarioGET( $request ) {
 
 function resgistrarApiUsuarioGET() {
 	register_rest_route(
-			'apiTeste', '/usuario', array(
+			'api', '/usuario', array(
 				array(
 			'methods'  => WP_REST_Server::READABLE, //PUT
 			'callback' => 'apiUsuarioGET'
