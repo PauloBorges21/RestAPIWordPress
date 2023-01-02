@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+
+</head>
+
+<body>
+    <input type="file" multiple>
+    <button>Enviar</button>
+
+    <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        button.addEventListener("click", handleClick);
+
+        const options = {
+            headers: {
+                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L1Jlc3RBUElXb3JkUHJlc3MiLCJpYXQiOjE2NzI2NzIxODUsIm5iZiI6MTY3MjY3MjE4NSwiZXhwIjoxNjczMjc2OTg1LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIyIn19fQ.0DVuC9xMpLE3S-uR61ZsZXOzYDaolFBhmfzNUcfGru4"
+            }
+        } 
+
+        function handleClick() {
+            const files = input.files;
+            const form = new FormData();
+
+            form.append("nome", "NoteBook");
+            form.append("descricao", "Esse é novo");
+            form.append("preco", "R$5.500,00");
+
+            axios.post("http://localhost/RestAPIWordPress/wp-json/api/produto",form, options);
+        }
+    </script>
+</body>
+
+</html>
