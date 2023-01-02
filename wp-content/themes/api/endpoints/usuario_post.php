@@ -34,6 +34,8 @@ function apiUsuarioPost( $request ) {
 		update_user_meta($userID , 'estado',$estado);
 	} else {
 		$response = new WP_Error( 'email', 'Email já cadastrado.', array( 'status' => 403 ) );
+		//echo $erroString = $response->get_error_message();
+
 	}
 
 
@@ -56,10 +58,11 @@ function apiUsuarioPost( $request ) {
 
 function resgistrarApiUsuarioPost() {
 	register_rest_route(
-		'apiTeste', '/usuario', array(
+			'apiTeste', '/usuario', array(
+				array(
 			'methods'  => 'POST', //PUT
 			'callback' => 'apiUsuarioPost'
-		)
+		))
 	);
 }
 

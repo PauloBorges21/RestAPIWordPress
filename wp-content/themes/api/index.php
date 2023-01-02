@@ -14,7 +14,7 @@ $args = array(
 //inicio do loop de posts
 $my_query = new Wp_Query($args);
 $my_posts = get_posts($args);
-var_dump($my_query);
+
 foreach ($my_posts as $post) : setup_postdata($post);
 
     $my_query = new Wp_Query($args);
@@ -23,7 +23,7 @@ foreach ($my_posts as $post) : setup_postdata($post);
     $title = get_the_title($post->ID, '', '', false);
 
 	$post_metas = get_post_meta(get_the_ID());
-	var_dump($post_metas);
+	
     ?>
 
 

@@ -58,7 +58,8 @@ define( 'AUTH_SALT',        '!%=$+w@^B`!x:n2?Kb7d951n%h%?hsu3[ZSNe>=EZG}8QGq:Fa6
 define( 'SECURE_AUTH_SALT', 'M;Ui>S3j%i8MAl|b4gJSSYTiez%@Nw0;169pf9!+Pp<pvZ4<-w3l(y0&hRsiVY!W' );
 define( 'LOGGED_IN_SALT',   '6QI#=i`=gJx_O6#W6YCbC(+^v+Pz)` My)7fgGp?O$0wy+1alh:DL?QFC$&$ZaBR' );
 define( 'NONCE_SALT',       'ivFdOQw/=>xgI**=. E.NV3?w>f)P/)1&{M$lcj#W~Qh&_Zz<Q(erW9$Yzi@rZ Q' );
-
+define('JWT_AUTH_SECRET_KEY', 'HNgB-td`L~z:{Dz&_[~-ea>DPth!R-8fbTYFi{Yl(+=O#5/<jk8S@48U0imQfTK');
+define('JWT_AUTH_CORS_ENABLE', true);
 /**#@-*/
 
 /**
@@ -83,6 +84,7 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
 
 /* Adicione valores personalizados entre esta linha até "Isto é tudo". */
 
